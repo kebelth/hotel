@@ -1,0 +1,84 @@
+﻿
+@{
+    ViewBag.Title = "DisponibilidadHabitaciones";
+}
+
+<!-- Breadcrumb Section Begin -->
+<div class="breadcrumb-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb-text">
+                    <h2>Reserve Ahora</h2>
+                    <div class="bt-option">
+                        <a href="./home.html">Inicio</a>
+                        <span>Buscar Disponibilidad</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumb Section End -->
+
+<!-- Room Details Section Begin -->
+<section class="room-details-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="room-details-item">
+                    <img src="~/img/room/room-details.jpg" alt="">
+                    <div class="rd-text">
+                        <div class="rd-title">
+                            <h3>Reserva en las Mejores Habitaciones </h3>
+                            <div class="rdt-right">
+                                <div class="rating">
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="room-booking">
+                    <h3>Su Reserva</h3>
+                    <form action="#">
+                        <div class="check-date">
+                            <label for="date-in">Check In:</label>
+                            <input type="text" class="date-input" id="date-in">
+                            <i class="icon_calendar"></i>
+                        </div>
+                        <div class="check-date">
+                            <label for="date-out">Check Out:</label>
+                            <input type="text" class="date-input" id="date-out">
+                            <i class="icon_calendar"></i>
+                        </div>
+                        <div class="select-option">
+                            <label for="guest">Adultos:</label>
+                            <select id="guest">
+                                <option value="1">1 Adulto</option>
+                                <option value="2">2 Adultos</option>
+                                <option value="3">3 Adultos</option>
+                                <option value="4">4 Adultos</option>
+                            </select>
+                        </div>
+                        <div class="select-option">
+                            <label for="guest">Niños:</label>
+                            <select id="guest">
+                                <option value="1">1 Niño</option>
+                                <option value="2">2 Niños</option>
+                            </select>
+                        </div>
+                        <button type="submit">Ver Disponibilidad</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Room Details Section End -->

@@ -1,0 +1,30 @@
+﻿@model ProyectoFinal_HotelCasadelSol.Entities.UsuariosEnt
+@{
+    ViewBag.Title = "RecuperarCuenta";
+}
+<section class="register-details-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+                <div class="blog-details-text">
+                    <div class="leave-comment">
+                        <div class="about-text">
+                            <div class="section-title">
+                                <span>Recupera tu Cuenta</span>
+                            </div>
+                        </div>
+                        @using (Html.BeginForm("RecuperarCuenta", "Home", FormMethod.Post, new { @class = "comment-form" }))
+                        {
+                            <div class="col-lg-6 text-center centered">
+                                @Html.TextBoxFor(Model => Model.Correo, new {@type = "email", @placeholder = "Correo Electrónico", @required = "true",
+                               @onblur = "ValidarCorreo();"})
+                                <button type="submit" id="btnRecuperar" disabled class="site-btn">Procesar</button>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="~/FuncionesJS/ValidacionesRecuperarCuenta.js"></script>

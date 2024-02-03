@@ -1,0 +1,48 @@
+﻿@model ProyectoFinal_HotelCasadelSol.Entities.UsuariosEnt
+
+@{
+    ViewBag.Title = "IniciarSesion";
+}
+<!-- Login Section Begin -->
+<section class="login-details-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="room-details-item">
+                    <img src="~/img/vacaciones1.jpg" height="400"/>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="room-booking-Login">
+                    <div class="about-text">
+                        <div class="section-title">
+                            <span>¡Empieza a Vacacionar!</span>
+                        </div>
+                    </div>
+                    @using (Html.BeginForm("IniciarSesion", "Home", FormMethod.Post))
+                    {
+                        <div class="check-date-Login">
+                            <label for="correo">Correo Electrónico:</label>
+                            @Html.TextBoxFor(Model => Model.Correo, new { @type = "email", @required = true })
+                        </div>
+                        <div class="check-date-Login">
+                            <label for="contraseña">Contraseña:</label>
+                            @Html.TextBoxFor(Model => Model.Contraseña, new { @type = "password", @required = true })
+                        </div>
+                        <button type="submit" class="site-btn">Iniciar Sesión</button>
+                        <div class="about-text-message">
+                            @ViewBag.mensaje
+                        </div>
+                        <div class="about-text login-details-link">
+                            <a href="@Url.Action("RegistrarUsuario", "Home")" class="primary-btn about-btn">¿AÚN SIN CUENTA? REGISTRESE AQUÍ</a>
+                        </div>
+                        <div class="about-text login-details-link">
+                            <a href="@Url.Action("RecuperarCuenta", "Home")" class="primary-btn about-btn">¿OLVIDÓ SU CONTRASEÑA?</a>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Login Section End -->
